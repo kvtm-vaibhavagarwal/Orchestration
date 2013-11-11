@@ -44,25 +44,25 @@ object modelxml {
 
     //modelId
     var mid = doc.createElement("modelId")
-    var mid_val = doc.createTextNode(s"$modelId")
+    var mid_val = doc.createTextNode(modelId.asInstanceOf[String])
     mid.appendChild(mid_val)
     excConfig.appendChild(mid)
 
     //start timestamp
     var stp = doc.createElement("startTimeStep")
-    var stp_val = doc.createTextNode(s"$startTime")
+    var stp_val = doc.createTextNode(startTime.asInstanceOf[String])
     stp.appendChild(stp_val)
     excConfig.appendChild(stp)
 
     //end timestamp
     var etp = doc.createElement("endTimeStep")
-    var etp_val = doc.createTextNode(s"$endTime")
+    var etp_val = doc.createTextNode(endTime.asInstanceOf[String])
     etp.appendChild(etp_val)
     excConfig.appendChild(etp)
 
     //init file
     var inf = doc.createElement("initFile")
-    var inf_val = doc.createTextNode(s"$initFile")
+    var inf_val = doc.createTextNode(initFile.asInstanceOf[String])
     inf.appendChild(inf_val)
     excConfig.appendChild(inf)
 
